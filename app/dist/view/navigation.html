@@ -1,0 +1,8 @@
+<div ng-controller="navController as vm" ng-cloak >
+    <md-nav-bar md-selected-nav-item="vm.currentNavItem" nav-bar-aria-label="navigation links">
+        <md-nav-item md-nav-href="#service" name="page1">Сервиз</md-nav-item>
+        <md-nav-item md-nav-href="#magazine" name="page2">Магазин</md-nav-item>
+        <md-nav-item md-nav-click="goto('page3')" name="page3">Услуги</md-nav-item>
+        <md-nav-item md-nav-click="goto('page4')" name="page4">Лизинг</md-nav-item>
+    </md-nav-bar>
+</div>

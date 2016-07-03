@@ -1,0 +1,17 @@
+#content {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 5px;
+}
+
+.work-time {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+.angular-google-map-container { height: 400px; }
+
+#brand {
+    width: 30%;
+    height: 30%;
+    border-radius: 5px;
+}

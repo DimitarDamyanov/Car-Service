@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="contactManagerApp">
+<head>
+    <meta charset="UTF-8">
+    <title>ContactManager</title>
+    <!--<link rel="stylesheet" href="./bower_components/angular-material/angular-material.min.css">-->
+    <link rel="stylesheet" href="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.0-rc.5/angular-material.css">
+    <link rel="stylesheet" href="./bower_components/angular-material-icons/angular-material-icons.css">
+    <link rel="stylesheet" href="./assets/app.css">
+    <style type="text/css">
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
+</head>
+<body layout="row" ng-cloak ng-controller="mainController as vm">
+    <div layout="column" flex>
+        <div ng-include="'dist/view/toolbar-header.html'"></div>
+        <div ng-include="'dist/view/navigation.html'"></div>
+        <md-content id="content">
+            <div ng-view></div>
+        </md-content>
+    </div>
+    <div ng-include="'dist/view/sidenav.html'" layout="vertical"></div>
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-animate/angular-animate.js"></script>
+    <script src="./bower_components/angular-aria/angular-aria.js"></script>
+    <<script src="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.0-rc.5/angular-material.js"></script>
+    <script src="./bower_components/angular-material-icons/angular-material-icons.js"></script>
+    <script src="./bower_components/lodash/dist/lodash.min.js"></script>
+    <script src="./bower_components/angular-google-maps/dist/angular-google-maps.min.js"></script>
+    <script src='./bower_components/angular-simple-logger/dist/angular-simple-logger.min.js'></script>
+    <script src="./bower_components/angular-route/angular-route.min.js"></script>
+    <script src="dist/controllers/mainController.js"></script>
+    <script src="dist/controllers/mapController.js"></script>
+    <script src="dist/controllers/magazineController.js"></script>
+    <script src="dist/controllers/serviceController.js"></script>
+    <script src="dist/controllers/navigationController.js"></script>
+    <script src="dist/boot.js"></script>
+</body>
+</html>
