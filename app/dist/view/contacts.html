@@ -1,0 +1,43 @@
+<div ng-controller="contactsController">
+    <div layout="row">
+        <div flex=45>
+            <md-toolbar class="md-theme-indigo">
+                <h2 class="md-toolbar-tools">Сервиз</h2>
+            </md-toolbar>
+            <div layout="column" layout-align="center" style="overflow: auto;" class="layout-column">
+                <div layout="row"></div>
+                <md-content flex="" layout-margin="" class="layout-margin _md flex">
+                    <h3 align="center">Понеделник - Петък  <ng-md-icon icon="access_time"></ng-md-icon>
+                        9:00 - 18:00</h3>
+                    <h3 align="center">Събота<ng-md-icon icon="access_time"></ng-md-icon>9:00 - 14:00</h3>
+                </md-content>
+            </div>
+            <h3 align="center">
+                <ng-md-icon icon="call"></ng-md-icon>
+                +359 889 522 662
+            </h3>
+            <p align="center">Сервиз, бул.Димитровградско шосе.газ станция "Топливо АД", Хасково 6300</p>
+            <div ng-include="'./dist/view/service-location.html'"></div>
+        </div>
+        <div flex=10></div>
+        <div flex=45>
+            <md-toolbar class="md-theme-indigo">
+                <h2 class="md-toolbar-tools">Магазин</h2>
+            </md-toolbar>
+            <div layout="column" layout-align="center" style="overflow: auto;" class="layout-column">
+                <md-content flex="" layout-margin="" class="layout-margin _md flex">
+                    <h3 align="center">Понеделник - Петък  <ng-md-icon icon="access_time"></ng-md-icon>
+                        9:00 - 18:00</h3>
+                    <h3 align="center">Събота   <ng-md-icon icon="access_time"></ng-md-icon>9:00 - 14:00</h3>
+                </md-content>
+            </div>
+            <h3 align="center">
+                <ng-md-icon icon="call"></ng-md-icon>
+                +359 889 321 249
+            </h3>
+            <p align="center">Магазин, гр.Хасково, ул. Хаджи Димитър 2, (до ресторант Орфей)</p>
+            <div ng-include="'./dist/view/shop-location.html'"></div>
+        </div>
+    </div>
+
+</div>

@@ -15,3 +15,19 @@
     height: 30%;
     border-radius: 5px;
 }
+
+#main-panel {
+
+
+    border-left: solid;
+    border-right: solid;
+   // border-color: #0000FF;
+}
+
+.side-border {
+    background-image: url("/dist/view/images/bg.png");
+}
+
+.md-button._md-nav-button {
+    font-size: larger;
+}

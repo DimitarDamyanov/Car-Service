@@ -1,17 +1,21 @@
 /// <reference path="_all.ts" />
 var MainController = ContractManagerApp.MainController;
-var MapController = ContractManagerApp.MapController;
 var NavigationController = ContractManagerApp.NavigationController;
 var MagazineController = ContractManagerApp.MagazineController;
 var ServiceController = ContractManagerApp.ServiceController;
+var ContactController = ContractManagerApp.ContactController;
+var ServiceLocationController = ContractManagerApp.ServiceLocationController;
+var ShopLocationController = ContractManagerApp.ShopLocationController;
 var ContactManagerApp;
 (function (ContactManagerApp) {
     angular.module('contactManagerApp', ['ngMaterial', 'ngRoute', 'ngMdIcons', 'uiGmapgoogle-maps'])
         .controller('mainController', MainController)
-        .controller('mapController', MapController)
+        .controller('serviceLocationController', ServiceLocationController)
+        .controller('shopLocationController', ShopLocationController)
         .controller('navController', NavigationController)
         .controller('magazineController', MagazineController)
         .controller('serviceController', ServiceController)
+        .controller('contactsController', ContactController)
         .config(function ($mdThemingProvider) {
         $mdThemingProvider.theme('default')
             .primaryPalette('blue')
@@ -31,6 +35,9 @@ var ContactManagerApp;
             }).when('/magazine', {
                 templateUrl: '../dist/view/magazine.html',
                 controller: 'magazineController'
+            }).when('/contacts', {
+                templateUrl: '../dist/view/contacts.html',
+                controller: 'contactsController'
             });
         }])
         .directive('regularCard', function () {
