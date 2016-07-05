@@ -19,7 +19,7 @@ var ContactManagerApp;
         .controller('contactsController', ContactController)
         .config(($mdThemingProvider:angular.material.IThemingProvider) => {
             $mdThemingProvider.theme('default')
-                .primaryPalette('blue')
+                .primaryPalette('red')
                 .accentPalette('red');
         })
         .config(['uiGmapGoogleMapApiProvider', function (GoogleMapApi) {

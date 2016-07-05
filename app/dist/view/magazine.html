@@ -1,43 +1,95 @@
 <div ng-controller="magazineController">
     <div class="row">
-        <div flex="40">
-            <md-toolbar layout="row" class="md-hue-3">
+        <div flex="100" class="shop-panel">
+            <md-toolbar layout="row" class="md-hue-2" >
                 <div class="md-toolbar-tools">
-                    <span> ЗА ВАШИЯТ АВТОМОБИЛ</span>
+                    <span><b>За вашия автомобил предлагаме:</b></span>
                 </div>
             </md-toolbar>
-            <md-content>
+            <md-content layout-padding>
                 <md-list flex>
-                    <md-list-item class="md-3-line"  ng-click="null">
-                        <div class="md-list-item-text" layout="column">
-                            <p><ng-md-icon icon="build"></ng-md-icon> Aвтомобилни газови уредби  италиански и  български - инжекционни и стандартни</p>
-                        </div>
-                    </md-list-item>
-                    <md-list-item class="md-3-line"  ng-click="null">
-                        <div class="md-list-item-text" layout="column">
-                           <p><ng-md-icon icon="build"></ng-md-icon> Резервни части</p>
-                        </div>
-                    </md-list-item>
-                    <md-list-item class="md-3-line"  ng-click="null">
-                        <div class="md-list-item-text" layout="column">
-                            <p><ng-md-icon icon="build"></ng-md-icon>Комплекти мини кит</p>
-                        </div>
-                    </md-list-item>
-                    <md-list-item class="md-3-line"  ng-click="null">
-                        <div class="md-list-item-text" layout="column">
-                            <p><ng-md-icon icon="build"></ng-md-icon>Газов и бензинов клапан</p>
-                        </div>
-                    </md-list-item>
-                    <md-list-item class="md-3-line"  ng-click="null">
-                        <div class="md-list-item-text" layout="column">
-                            <p><ng-md-icon icon="build"></ng-md-icon>Изпарители  електрически и вакуумни и мембрани за тях</p>
-                        </div>
-                    </md-list-item>
-
-
+                    <!--<md-list-item class="md-3-line"  ng-click="null">-->
+                        <!--<div class="md-list-item-text" layout="column">-->
+                            <!--<p class="shop-item"><ng-md-icon icon="build"></ng-md-icon> Aвтомобилни газови уредби  италиански и  български - инжекционни и стандартни</p>-->
+                        <!--</div>-->
+                    <!--</md-list-item>-->
+                    <!--<md-list-item class="md-3-line"  ng-click="null">-->
+                        <!--<div class="md-list-item-text" layout="column">-->
+                           <!--<p><ng-md-icon icon="build"></ng-md-icon> Резервни части</p>-->
+                        <!--</div>-->
+                    <!--</md-list-item>-->
+                    <!--<md-list-item class="md-3-line"  ng-click="null">-->
+                        <!--<div class="md-list-item-text" layout="column">-->
+                            <!--<p><ng-md-icon icon="build"></ng-md-icon>Комплекти мини кит</p>-->
+                        <!--</div>-->
+                    <!--</md-list-item>-->
+                    <!--<md-list-item class="md-3-line"  ng-click="null">-->
+                        <!--<div class="md-list-item-text" layout="column">-->
+                            <!--<p><ng-md-icon icon="build"></ng-md-icon>Газов и бензинов клапан</p>-->
+                        <!--</div>-->
+                    <!--</md-list-item>-->
+                    <!--<md-list-item class="md-3-line"  ng-click="null">-->
+                        <!--<div class="md-list-item-text" layout="column">-->
+                            <!--<p><ng-md-icon icon="build"></ng-md-icon>Изпарители  електрически и вакуумни и мембрани за тях</p>-->
+                        <!--</div>-->
+                    <!--</md-list-item>-->
+                    <div class="md-list-item-text">
+                        <p class="shop-item"><ng-md-icon icon="build"></ng-md-icon> Автомобилни газови уредби  италиански и  български - инжекционни и стандартни</p>
+                    </div>
+                    <div class="md-list-item-text">
+                        <p class="shop-item"><ng-md-icon icon="build"></ng-md-icon> Резервни части</p>
+                    </div>
+                    <div class="md-list-item-text">
+                        <p class="shop-item"><ng-md-icon icon="build"></ng-md-icon> Комплекти мини кит</p>
+                    </div>
+                    <div class="md-list-item-text">
+                        <p class="shop-item"><ng-md-icon icon="build"></ng-md-icon> Газов и бензинов клапан</p>
+                    </div>
+                    <div class="md-list-item-text">
+                        <p class="shop-item"><ng-md-icon icon="build"></ng-md-icon> Изпарители  електрически и вакуумни и мембрани за тях</p>
+                    </div>
+                    <div class="md-list-item-text">
+                        <p class="shop-item"><ng-md-icon icon="build"></ng-md-icon> Резервни части</p>
+                    </div>
+                    <div class="md-list-item-text">
+                        <p class="shop-item"><ng-md-icon icon="build"></ng-md-icon> Изпарители  електрически и вакуумни и мембрани за тях</p>
+                    </div>
                 </md-list>
             </md-content>
         </div>
     </div>
-
+    <div class="row">
+        <div flex="100" class="shop-panel">
+            <md-toolbar layout="row" class="md-hue-2" >
+                <div class="md-toolbar-tools">
+                    <span><b>За вашите битови уреди предлагаме:</b></span>
+                </div>
+            </md-toolbar>
+            <md-content layout-padding >
+                <md-list flex>
+                    <div class="md-list-item-text">
+                        <p class="shop-item"><ng-md-icon icon="build"></ng-md-icon> Tуристическа бутилка 5л.</p>
+                    </div>
+                    <div class="md-list-item-text">
+                        <p class="shop-item"><ng-md-icon icon="build"></ng-md-icon> Tуристически котлони</p>
+                    </div>
+                    <div class="md-list-item-text">
+                        <p class="shop-item"><ng-md-icon icon="build"></ng-md-icon> Eдинични, двойни и тройки котлони</p>
+                    </div>
+                    <div class="md-list-item-text">
+                        <p class="shop-item"><ng-md-icon icon="build"></ng-md-icon> Битови бутилки за газ, различни размери</p>
+                    </div>
+                    <div class="md-list-item-text">
+                        <p class="shop-item"><ng-md-icon icon="build"></ng-md-icon> Редуцир вентил за български, турски, руски, полски, иналиански бутилки</p>
+                    </div>
+                    <div class="md-list-item-text">
+                        <p class="shop-item"><ng-md-icon icon="build"></ng-md-icon> Маркуч за свързване на уреда и бутилката</p>
+                    </div>
+                    <div class="md-list-item-text">
+                        <p class="shop-item"><ng-md-icon icon="build"></ng-md-icon> Уплътнения и други резервни части</p>
+                    </div>
+                </md-list>
+            </md-content>
+        </div>
+    </div>
 </div>

@@ -28,6 +28,20 @@
     background-image: url("/dist/view/images/bg.png");
 }
 
-.md-button._md-nav-button {
+
+.shop-item {
     font-size: larger;
 }
+
+.shop-panel {
+    margin-top: 20px;
+    border-left: solid;
+    border-right: solid;
+    border-bottom: solid;
+    border-color: #c62828;
+}
+
+.location {
+    margin-bottom: 8%;
+}
+

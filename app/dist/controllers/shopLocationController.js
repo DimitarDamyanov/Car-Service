@@ -5,13 +5,13 @@ var ContractManagerApp;
 (function (ContractManagerApp) {
     var ShopLocationController = (function () {
         function ShopLocationController() {
-            this.map = { center: { latitude: 41.933698, longitude: 25.554554 }, zoom: 17 };
+            this.map = { center: { latitude: 41.933548, longitude: 25.554605 }, zoom: 17 };
             this.options = { scrollwheel: false };
             this.marker = {
                 id: 0,
                 coords: {
-                    latitude: 41.933698,
-                    longitude: 25.554554
+                    latitude: 41.933548,
+                    longitude: 25.554605
                 },
                 options: { draggable: true }
             };
