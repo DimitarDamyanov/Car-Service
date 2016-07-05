@@ -3,13 +3,13 @@
  */
 module ContractManagerApp {
     export class ShopLocationController {
-        map = {center: {latitude: 41.933548, longitude: 25.554605 }, zoom: 17 };
+        map = {center: {latitude:  41.933500, longitude: 25.554622 }, zoom: 17 };
         options = {scrollwheel: false};
         marker = {
             id: 0,
             coords: {
-                latitude:  41.933548,
-                longitude: 25.554605
+                latitude:  41.933500,
+                longitude: 25.554622
             },
             options: {draggable: true}
         }
