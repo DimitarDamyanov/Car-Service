@@ -1,8 +1,5 @@
 <div ng-controller="navController as vm" ng-cloak >
     <md-nav-bar  md-selected-nav-item="vm.currentNavItem" nav-bar-aria-label="navigation links">
-            <md-nav-item md-nav-href="#service" name="page1" >Сервиз</md-nav-item>
-        <md-nav-item md-nav-href="#magazine" name="page2" >Магазин</md-nav-item>
-        <md-nav-item md-nav-click="goto('page4')" name="page4">Лизинг</md-nav-item>
-        <md-nav-item md-nav-href="#contacts" name="page5">Контакти</md-nav-item>
+        <md-nav-item ng-repeat="item in vm.items" md-nav-href="#{{item.route}}" name="{{item.name}}">{{item.name}}</md-nav-item>
     </md-nav-bar>
 </div>

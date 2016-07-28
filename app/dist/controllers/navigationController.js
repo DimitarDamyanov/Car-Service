@@ -5,7 +5,20 @@ var ContractManagerApp;
 (function (ContractManagerApp) {
     var NavigationController = (function () {
         function NavigationController() {
-            this.currentNavItem = 'page1';
+            this.currentNavItem = 'Сервиз';
+            this.items = [{
+                    route: "service",
+                    name: "Сервиз"
+                }, {
+                    route: "shop",
+                    name: "Магазин"
+                }, {
+                    route: "leasing",
+                    name: "Лизинг"
+                }, {
+                    route: "contacts",
+                    name: "Контакти"
+                }];
         }
         NavigationController.$inject = ['$location'];
         return NavigationController;

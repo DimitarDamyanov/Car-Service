@@ -1,14 +1,32 @@
-<div ng-controller="serviceController">
+<div ng-controller="serviceController as vm">
     <div layout="row" flex>
-        <div flex="50">
-            <h3>Ние може да се погрижим за вашия проблем</h3>
-            <p>Базирайки се на дългогодишния опит с автомобилите, ние сме готови да откликнем на всеки проблем и да немерим бързо и адекватно решение. В сервиза можете да направите профилактика на газовата Ви система, без значение на марката автомобил.</p>
-            <p>Сервизът разполага с модерен газ-анализатор за анализ и диагностика на вашият автомобил при работа на газ.
-                Това е единственият сервиз в гр.Хасково и областта където се извършва ремонт на докамински уреди работещи на пропан-бутан.
-            </p>
+        <div flex="80" style="margin: 10px">
+            <div flex="100" style="margin-left: 20px">
+                <h3 ng-if="vm.serviceInformation.title">{{vm.serviceInformation.title}}</h3>
+                <div ng-if="vm.serviceInformation.paragraphs" ng-repeat="p in vm.serviceInformation.paragraphs">
+                    <p>{{p}}</p>
+                </div>
+            </div>
+            <div flex="100" class="shop-panel" ng-repeat="panel in vm.serviceInformation.panels">
+                <md-toolbar layout="row" class="md-hue-2">
+                    <div class="md-toolbar-tools">
+                        <span><b>{{panel.title}}</b></span>
+                    </div>
+                </md-toolbar>
+                <md-content layout-padding>
+                    <md-list flex>
+                        <div class="md-list-item-text" ng-repeat="item in panel.items">
+                            <p class="shop-item">
+                                <ng-md-icon icon="build"></ng-md-icon>
+                                {{item}}
+                            </p>
+                        </div>
+                    </md-list>
+                </md-content>
+            </div>
         </div>
-        <div flex="10"></div>
-        <div flex="40">
+
+        <div flex="20">
             <md-toolbar layout="row" class="md-hue-2">
                 <div class="md-toolbar-tools">
                     <span>Ние работим с</span>
@@ -16,25 +34,8 @@
             </md-toolbar>
             <md-content>
                 <md-list flex>
-                    <md-list-item class="md-3-line"  ng-click="null">
-                        <img id="brand" src="/dist/view/images/brands/lovato.png" class="md-avatar" />
-                        <div class="md-list-item-text" layout="column">
-                            <p> Ловато Газ предлага пълна гама от системи и компоненти за преобразуване на автомобилите на газ, както пропан-бутан, така и метан, при пълно спазване на най-новите нормативи за вредни емисии</p>
-                        </div>
-                    </md-list-item>
-                    <md-list-item class="md-3-line"  ng-click="null">
-                            <img id="brand" src="/dist/view/images/brands/brc.png" class="md-avatar" />
-                            <div class="md-list-item-text" layout="column">
-                                <p>BRC е търговска марка с дългогодишен опит и традиции. Качеството на компонентите и безпроблемната работа прави BRC една от най-предпочитаните марки в Европа. </p>
-                            </div>
-                    </md-list-item>
-
-                    <md-list-item class="md-3-line"  ng-click="null">
-                        <img id="brand" src="/dist/view/images/brands/landirenzo.jpg" class="md-avatar" />
-                        <div class="md-list-item-text" layout="column">
-                            <p> Landi Renzo SpA е водеща световна компания. Тя притежава 30%   пазарен дял от пазарa за компоненти и системи за алтернативни горива пропан бутан и метан.</p>
-                        </div>
-
+                    <md-list-item class="md-3-line"  ng-click="vm.goToPage(partner.website)" ng-repeat="partner in  vm.serviceInformation.partners">
+                        <img id="brand" src="{{partner.src}}" class="md-avatar" />
                     </md-list-item>
                 </md-list>
             </md-content>

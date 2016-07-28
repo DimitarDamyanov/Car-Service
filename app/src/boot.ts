@@ -1,22 +1,28 @@
 /// <reference path="_all.ts" />
 import MainController = ContractManagerApp.MainController;
 import NavigationController = ContractManagerApp.NavigationController;
-import MagazineController = ContractManagerApp.MagazineController;
+import ShopController = ContractManagerApp.ShopController;
 import ServiceController = ContractManagerApp.ServiceController;
 import ContactController = ContractManagerApp.ContactController;
-import ServiceLocationController = ContractManagerApp.ServiceLocationController;
-import ShopLocationController = ContractManagerApp.ShopLocationController;
+import LeasingController = ContractManagerApp.LeasingController;
+import ServiceService = ContractManagerApp.ServiceService;
+import ShopService = ContractManagerApp.ShopService;
+import ContactsService = ContractManagerApp.ContactsService;
+import LeasingService = ContractManagerApp.LeasingService;
 
 var ContactManagerApp;
 (function (ContactManagerApp) {
     angular.module('contactManagerApp', ['ngMaterial', 'ngRoute', 'ngMdIcons', 'uiGmapgoogle-maps'])
         .controller('mainController', MainController)
-        .controller('serviceLocationController', ServiceLocationController)
-        .controller('shopLocationController', ShopLocationController)
         .controller('navController', NavigationController)
-        .controller('magazineController', MagazineController)
+        .controller('shopController', ShopController)
         .controller('serviceController', ServiceController)
         .controller('contactsController', ContactController)
+        .controller('leasingController', LeasingController)
+        .service('ServiceService', ServiceService)
+        .service('ShopService', ShopService)
+        .service('ContactsService', ContactsService)
+        .service('LeasingService', LeasingService)
         .config(($mdThemingProvider:angular.material.IThemingProvider) => {
             $mdThemingProvider.theme('default')
                 .primaryPalette('red')
@@ -33,28 +39,17 @@ var ContactManagerApp;
             $routeProvider.when("/service", {
                 templateUrl: '../dist/view/service.html',
                 controller: 'serviceController'
-            }). when('/magazine', {
-                templateUrl: '../dist/view/magazine.html',
-                controller: 'magazineController'
-            }).when('/contacts', {
+            }). when('/shop', {
+                templateUrl: '../dist/view/shop.html',
+                controller: 'shopController'
+            }).when('/leasing', {
+                templateUrl: '../dist/view/leasing.html',
+                controller: 'leasingController'
+            }).
+            when('/contacts', {
                 templateUrl: '../dist/view/contacts.html',
                 controller: 'contactsController'
-            })
-        }])
-        .directive('regularCard', function () {
-            return {
-                restrict: 'E',
-                templateUrl: '../dist/view/tmpls/regularCard.tmpl.html',
-                scope: {
-                    name: '@',
-                    description: '@',
-                    avatar: '@',
-                    theme: '@'
-                },
-                controller: function ($scope) {
-                    $scope.theme = $scope.theme || 'default';
+            }).otherwise({ redirectTo: '/service' })
 
-                }
-            }
-        })
+        }])
 })(ContactManagerApp || (ContactManagerApp = {}));

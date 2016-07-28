@@ -4,8 +4,19 @@
 module ContractManagerApp {
     export class NavigationController {
         static $inject = ['$location'];
-        currentNavItem: string = 'page1'
-
-       
+        currentNavItem: string = 'Сервиз';
+        items = [{
+            route: "service",
+            name: "Сервиз"
+        },{
+            route: "shop",
+            name: "Магазин"
+        },{
+            route: "leasing",
+            name: "Лизинг"
+        },{
+            route: "contacts",
+            name: "Контакти"
+        }]
     }
 }

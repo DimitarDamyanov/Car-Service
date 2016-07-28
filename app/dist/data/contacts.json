@@ -1,0 +1,63 @@
+{
+  "contacts": [{
+    "title": "Сервиз",
+    "phone": "+359 889 522 662",
+    "worktime": {
+      "business": "9:00 - 18:00",
+      "weekend": "9:00 - 14:00"
+    },
+    "location": {
+      "text" : "Сервиз, бул.Димитровградско шосе.газ станция \"Топливо АД\", Хасково 6300",
+      "map": {
+        "center": {
+          "latitude": 41.953487,
+          "longitude": 25.557492
+        },
+        "zoom": 17
+      },
+      "options": {
+        "scrollwheel": false
+      },
+      "marker": {
+        "id": 0,
+        "coords": {
+          "latitude": 41.953487,
+          "longitude": 25.557492
+        },
+        "options": {
+          "draggable": true
+        }
+      }
+    }
+  }, {
+    "title": "Магазин",
+    "phone": "+359 889 321 249",
+    "worktime": {
+      "business": "9:00 - 18:00",
+      "weekend": "9:00 - 14:00"
+    },
+    "location": {
+      "text" : "Магазин, гр.Хасково, ул. Хаджи Димитър 2, (до ресторант Орфей)",
+      "map": {
+        "center": {
+          "latitude": 41.933500,
+          "longitude": 25.554622
+        },
+        "zoom": 17
+      },
+      "options": {
+        "scrollwheel": false
+      },
+      "marker": {
+        "id": 0,
+        "coords": {
+          "latitude": 41.933500,
+          "longitude": 25.554622
+        },
+        "options": {
+          "draggable": true
+        }
+      }
+    }
+  }]
+}

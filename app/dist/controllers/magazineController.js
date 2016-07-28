@@ -3,12 +3,12 @@
  */
 var ContractManagerApp;
 (function (ContractManagerApp) {
-    var MagazineController = (function () {
-        function MagazineController() {
+    var ShopController = (function () {
+        function ShopController() {
             this.text = "sdfsdfsdf";
         }
-        return MagazineController;
+        return ShopController;
     }());
-    ContractManagerApp.MagazineController = MagazineController;
+    ContractManagerApp.ShopController = ShopController;
 })(ContractManagerApp || (ContractManagerApp = {}));
 //# sourceMappingURL=magazineController.js.map

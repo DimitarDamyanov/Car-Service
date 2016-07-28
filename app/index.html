@@ -2,7 +2,7 @@
 <html lang="en" ng-app="contactManagerApp">
 <head>
     <meta charset="UTF-8">
-    <title>ContactManager</title>
+    <title>WWW.KAMEN-SERVICE.COM</title>
     <!--<link rel="stylesheet" href="./bower_components/angular-material/angular-material.min.css">-->
     <link rel="stylesheet" href="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.0-rc.5/angular-material.css">
     <link rel="stylesheet" href="./bower_components/angular-material-icons/angular-material-icons.css">
@@ -13,16 +13,20 @@
         }
     </style>
 </head>
-<body layout="row" ng-cloak ng-controller="mainController as vm">
-    <div flex=20 class="side-border"></div>
-    <div layout="column" id="main-panel" flex>
-        <div ng-include="'dist/view/toolbar-header.html'"></div>
-        <div ng-include="'dist/view/navigation.html'"></div>
-        <md-content id="content">
-            <div ng-view></div>
-        </md-content>
-    </div>
-    <div flex=20  class="side-border"></div>
+<body>
+    <md-content>
+        <div layout="row" ng-cloak ng-controller="mainController as vm">
+            <div flex=20 class="side-border"></div>
+            <div layout="column" id="main-panel" flex>
+                <div ng-include="'dist/view/toolbar-header.html'"></div>
+                <div ng-include="'dist/view/navigation.html'"></div>
+                <div class="demo-md-panel-content">
+                    <div ng-view></div>
+                </div>
+            </div>
+            <div flex=20  class="side-border"></div>
+        </div>
+    </md-content>
     <!--<div ng-include="'dist/view/sidenav.html'" layout="vertical"></div>-->
     <script src="./bower_components/angular/angular.js"></script>
     <script src="./bower_components/angular-animate/angular-animate.js"></script>
@@ -36,10 +40,15 @@
     <script src="dist/controllers/mainController.js"></script>
     <script src="dist/controllers/serviceLocationController.js"></script>
     <script src="dist/controllers/shopLocationController.js"></script>
-    <script src="dist/controllers/magazineController.js"></script>
+    <script src="dist/controllers/shopController.js"></script>
     <script src="dist/controllers/serviceController.js"></script>
     <script src="dist/controllers/navigationController.js"></script>
     <script src="dist/controllers/contactController.js"></script>
+    <script src="dist/controllers/leasingController.js"></script>
+    <script src="dist/services/serviceService.js"></script>
+    <script src="dist/services/shopService.js"></script>
+    <script src="dist/services/contactsService.js"></script>
+    <script src="dist/services/leasingService.js"></script>
     <script src="dist/boot.js"></script>
 </body>
 </html>

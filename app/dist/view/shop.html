@@ -1,0 +1,18 @@
+<div ng-controller="shopController as vm">
+    <div class="row">
+        <div flex="100" class="shop-panel"  ng-repeat="panel in vm.shopInformation.panels">
+            <md-toolbar layout="row" class="md-hue-2" >
+                <div class="md-toolbar-tools">
+                    <span><b>{{panel.title}}</b></span>
+                </div>
+            </md-toolbar>
+            <md-content layout-padding>
+                <md-list flex>
+                    <div class="md-list-item-text">
+                        <p class="shop-item"  ng-repeat="item in panel.items" ><ng-md-icon icon="build"></ng-md-icon>{{item}}</p>
+                    </div>
+                </md-list>
+            </md-content>
+        </div>
+    </div>
+</div>

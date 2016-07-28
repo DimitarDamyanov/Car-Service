@@ -1,43 +1,27 @@
-<div ng-controller="contactsController">
+<div ng-controller="contactsController as vm">
     <div layout="row">
-        <div flex=45>
+        <div flex=50 class="custom-location" ng-repeat="contact in vm.contactsInformation.contacts">
             <md-toolbar class="md-theme-indigo">
-                <h2 class="md-toolbar-tools">Сервиз</h2>
+                <h2 class="md-toolbar-tools">{{contact.title}}</h2>
             </md-toolbar>
             <div layout="column" layout-align="center" style="overflow: auto;" class="layout-column">
                 <div layout="row"></div>
                 <md-content flex="" layout-margin="" class="layout-margin _md flex">
                     <h3 align="center">Понеделник - Петък  <ng-md-icon icon="access_time"></ng-md-icon>
-                        9:00 - 18:00</h3>
-                    <h3 align="center">Събота <ng-md-icon icon="access_time"></ng-md-icon>9:00 - 14:00</h3>
+                       {{contact.worktime.business}}</h3>
+                    <h3 align="center">Събота <ng-md-icon icon="access_time"></ng-md-icon>{{contact.worktime.weekend}}</h3>
                 </md-content>
             </div>
             <h3 align="center">
                 <ng-md-icon icon="call"></ng-md-icon>
-                +359 889 522 662
+                {{contact.phone}}
             </h3>
-            <p align="center">Сервиз, бул.Димитровградско шосе.газ станция "Топливо АД", Хасково 6300</p>
-            <div ng-include="'./dist/view/service-location.html'" class="location"></div>
-        </div>
-        <div flex=10></div>
-        <div flex=45>
-            <md-toolbar class="md-theme-indigo">
-                <h2 class="md-toolbar-tools">Магазин</h2>
-            </md-toolbar>
-            <div layout="column" layout-align="center" style="overflow: auto;" class="layout-column">
-                <md-content flex="" layout-margin="" class="layout-margin _md flex">
-                    <h3 align="center">Понеделник - Петък  <ng-md-icon icon="access_time"></ng-md-icon>
-                        9:00 - 18:00</h3>
-                    <h3 align="center">Събота   <ng-md-icon icon="access_time"></ng-md-icon>9:00 - 14:00</h3>
-                </md-content>
+            <p align="center">{{contact.location.text}}</p>
+            <div>
+                <ui-gmap-google-map center="contact.location.map.center" zoom="contact.location.map.zoom" options="contact.location.options">
+                    <ui-gmap-marker coords='contact.location.marker.coords' idKey="contact.location.marker.id"></ui-gmap-marker>
+                </ui-gmap-google-map>
             </div>
-            <h3 align="center">
-                <ng-md-icon icon="call"></ng-md-icon>
-                +359 889 321 249
-            </h3>
-            <p align="center">Магазин, гр.Хасково, ул. Хаджи Димитър 2, (до ресторант Орфей)</p>
-            <div ng-include="'./dist/view/shop-location.html'" class="location"></div>
         </div>
     </div>
-
 </div>

@@ -4,9 +4,19 @@
 var ContractManagerApp;
 (function (ContractManagerApp) {
     var ServiceController = (function () {
-        function ServiceController() {
-            this.text = "sdfsdfsdf";
+        function ServiceController(service, $window) {
+            this.service = service;
+            this.$window = $window;
+            var self = this;
+            service.loadServiceInformation().then(function (data) {
+                self.serviceInformation = data;
+                console.log(self.serviceInformation);
+            });
         }
+        ServiceController.prototype.goToPage = function (url) {
+            this.$window.open(url, '_blank');
+        };
+        ServiceController.$inject = ["ServiceService", "$window"];
         return ServiceController;
     }());
     ContractManagerApp.ServiceController = ServiceController;

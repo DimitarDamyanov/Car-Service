@@ -4,8 +4,15 @@
 var ContractManagerApp;
 (function (ContractManagerApp) {
     var ContactController = (function () {
-        function ContactController() {
+        function ContactController(service) {
+            this.service = service;
+            var self = this;
+            service.loadContactsInformation().then(function (data) {
+                console.log(data);
+                self.contactsInformation = data;
+            });
         }
+        ContactController.$inject = ["ContactsService"];
         return ContactController;
     }());
     ContractManagerApp.ContactController = ContactController;
