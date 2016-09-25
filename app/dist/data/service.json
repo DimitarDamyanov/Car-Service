@@ -28,9 +28,13 @@
     ]
   }],
   "partners" : [{
-      "name" : "Lovato",
-      "src" : "/dist/view/images/brands/lovato.png",
-      "website" : "http://www.lovato.bg/"
+      "name" : "Bardolini",
+      "src" : "/dist/view/images/brands/bardolini.jpeg",
+      "website" : "#"
+  },{
+    "name" : "Lovato",
+    "src" : "/dist/view/images/brands/lovato.png",
+    "website" : "http://www.lovato.bg/"
   },{
     "name" : "BRC",
     "src" : "/dist/view/images/brands/brc.png",

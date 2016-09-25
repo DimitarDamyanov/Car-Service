@@ -1,6 +1,3 @@
-/**
- * Created by D on 2.7.2016 г..
- */
 var ContractManagerApp;
 (function (ContractManagerApp) {
     var MainController = (function () {

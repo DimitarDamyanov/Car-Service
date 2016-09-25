@@ -1,6 +1,3 @@
-/**
- * Created by D on 27.7.2016 г..
- */
 module ContractManagerApp {
     const LEASING_URL = '/dist/data/leasing.json';
 

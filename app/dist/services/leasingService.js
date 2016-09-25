@@ -1,6 +1,3 @@
-/**
- * Created by D on 27.7.2016 г..
- */
 var ContractManagerApp;
 (function (ContractManagerApp) {
     var LEASING_URL = '/dist/data/leasing.json';

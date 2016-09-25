@@ -1,6 +1,3 @@
-/**
- * Created by D on 3.7.2016 г..
- */
 var ContractManagerApp;
 (function (ContractManagerApp) {
     var NavigationController = (function () {
@@ -12,9 +9,6 @@ var ContractManagerApp;
                 }, {
                     route: "shop",
                     name: "Магазин"
-                }, {
-                    route: "leasing",
-                    name: "Лизинг"
                 }, {
                     route: "contacts",
                     name: "Контакти"

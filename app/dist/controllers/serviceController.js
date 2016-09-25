@@ -10,7 +10,6 @@ var ContractManagerApp;
             var self = this;
             service.loadServiceInformation().then(function (data) {
                 self.serviceInformation = data;
-                console.log(self.serviceInformation);
             });
         }
         ServiceController.prototype.goToPage = function (url) {
